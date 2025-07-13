@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>GardenMakeover</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+        }
+
+        /* Перший canvas — це Three.js (фон), другий — PixiJS (UI) */
+        canvas:nth-of-type(1) {
+            z-index: 0;
+        }
+
+        canvas:nth-of-type(2) {
+            z-index: 10;
+            pointer-events: auto;
+        }
+    </style>
+</head>
+<body>
+<script type="module" src="/src/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+</body>
+</html>
