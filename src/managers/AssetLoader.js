@@ -7,7 +7,7 @@ export class AssetLoader {
         this.scene = sceneManager.scene;
         this.mixerArray = sceneManager.mixers;
         this.sceneManager = sceneManager;
-
+        console.log(`test`);
         this.loader = new GLTFLoader();
         this.root = null;
         this.objectsGltf = null;
